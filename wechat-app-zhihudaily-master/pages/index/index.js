@@ -18,6 +18,12 @@ Page({
       url: '../detail/detail?id=' + e.target.dataset.id
     })
   },
+  //事件处理函数
+  bindViewTap(e) {
+      wx.navigateTo({
+          url: '../detail/detail?id=' + e.target.dataset.id
+      })
+  },
   loadMore (e) {
     if (this.data.list.length === 0) return
     var date = this.getNextDate()
